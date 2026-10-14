@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart Ambulance Alert System - AI-powered emergency traffic management." />
+  <title>SAAS — Smart Ambulance Alert System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="toast" class="toast"></div>
+
+  <header class="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">+</span>
+      <span>SAAS<span class="brand-dot">.</span></span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#how">How it works</a>
+      <a href="#technology">Technology</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" data-open-login>Sign in</button>
+      <a class="btn btn-primary" href="#demo">Live Demo</a>
+    </div>
+    <button class="mobile-menu" id="mobileMenu">☰</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Intelligent emergency traffic management</div>
+        <h1>Clear the road <span>before</span> the ambulance arrives.</h1>
+        <p>
+          SAAS connects ambulance route data with AI-controlled early warning
+          signals, giving drivers advance notice so emergency vehicles can move
+          through congested roads faster.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#demo">Explore the dashboard →</a>
+          <a class="btn btn-outline btn-lg" href="#how">How it works</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>100 m</strong><span>signal spacing</span></div>
+          <div><strong>Real-time</strong><span>route response</span></div>
+          <div><strong>AI</strong><span>signal control</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-window">
+          <div class="window-top"><span></span><span></span><span></span><b>SAAS Control Center</b></div>
+          <div class="mini-map">
+            <div class="road road-a"></div><div class="road road-b"></div>
+            <div class="road road-c"></div>
+            <div class="signal s1">⚠</div><div class="signal s2">⚠</div><div class="signal s3">⚠</div>
+            <div class="ambulance">🚑</div>
+            <div class="route-line"></div>
+          </div>
+          <div class="mini-cards">
+            <div><small>ACTIVE ROUTE</small><b>Hospital → Zone 4</b></div>
+            <div><small>ETA</small><b>04:32</b></div>
+            <div><small>SIGNALS</small><b class="green">12 ACTIVE</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section light">
+      <div class="section-heading">
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2>From ambulance GPS to an open road.</h2>
+        <p>A simple chain of connected decisions turns an emergency route into an early warning corridor.</p>
+      </div>
+      <div class="steps">
+        <article class="step-card"><div class="step-num">01</div><h3>Locate</h3><p>The ambulance transmits its current location and destination to the control platform.</p></article>
+        <article class="step-card"><div class="step-num">02</div><h3>Analyze</h3><p>The system evaluates the planned route and current traffic conditions.</p></article>
+        <article class="step-card"><div class="step-num">03</div><h3>Warn</h3><p>Signals on the route activate before the ambulance reaches each road segment.</p></article>
+        <article class="step-card"><div class="step-num">04</div><h3>Clear</h3><p>Drivers receive visual and acoustic warnings and can prepare to make way.</p></article>
+      </div>
+    </section>
+
+    <section id="technology" class="section">
+      <div class="section-heading">
+        <span class="eyebrow">SYSTEM TECHNOLOGY</span>
+        <h2>Built for smart-city emergency response.</h2>
+      </div>
+      <div class="tech-grid">
+        <article class="feature"><div class="icon">AI</div><h3>AI Route Control</h3><p>Route-aware signal activation designed to anticipate the ambulance instead of waiting for it to arrive.</p></article>
+        <article class="feature"><div class="icon">LED</div><h3>Visual Alerts</h3><p>High-visibility warning boards communicate the approaching emergency vehicle to road users.</p></article>
+        <article class="feature"><div class="icon">🔊</div><h3>Acoustic Alerts</h3><p>Sound warnings provide an additional channel for drivers who may not immediately see the signal.</p></article>
+        <article class="feature"><div class="icon">IoT</div><h3>Connected Infrastructure</h3><p>Roadside units and the central platform exchange status information in real time.</p></article>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo-section">
+      <div class="section-heading left">
+        <span class="eyebrow">INTERACTIVE PROTOTYPE</span>
+        <h2>Municipality control dashboard.</h2>
+        <p>This prototype simulates an emergency route. Start an ambulance to see the early-warning corridor activate.</p>
+      </div>
+      <div class="dashboard">
+        <aside class="sidebar">
+          <div class="side-brand"><span class="brand-mark">+</span><b>SAAS Control</b></div>
+          <button class="side-link active">▦ Overview</button>
+          <button class="side-link">🚑 Ambulances</button>
+          <button class="side-link">⚠ Signals</button>
+          <button class="side-link">◈ Routes</button>
+          <button class="side-link">▤ Reports</button>
+          <div class="sidebar-bottom"><small>DEMO CITY</small><b>Municipality Admin</b></div>
+        </aside>
+        <div class="dash-main">
+          <div class="dash-header">
+            <div><span class="muted">Overview / Live operations</span><h3>Emergency Traffic Control</h3></div>
+            <button class="btn btn-primary" id="startDemo">Start ambulance</button>
+          </div>
+          <div class="metric-grid">
+            <div class="metric"><span>Active ambulances</span><strong id="mAmb">1</strong><small class="up">● Live</small></div>
+            <div class="metric"><span>Active alerts</span><strong id="mAlerts">4</strong><small>route corridor</small></div>
+            <div class="metric"><span>Estimated ETA</span><strong id="mEta">04:32</strong><small>to City Hospital</small></div>
+            <div class="metric"><span>Signal coverage</span><strong id="mCoverage">1.2 km</strong><small>ahead of ambulance</small></div>
+          </div>
+          <div class="dash-grid">
+            <div class="map-panel">
+              <div class="panel-title"><b>Live Route Map</b><span id="systemStatus" class="status-badge">SYSTEM READY</span></div>
+              <div class="city-map" id="cityMap">
+                <div class="map-road r1"></div><div class="map-road r2"></div><div class="map-road r3"></div>
+                <div class="map-road r4"></div><div class="map-road r5"></div>
+                <div class="map-label l1">MAIN AVENUE</div><div class="map-label l2">CENTRAL ROAD</div>
+                <div class="hospital">✚<span>City Hospital</span></div>
+                <div class="map-ambulance" id="mapAmb">🚑</div>
+                <div class="route-path"></div>
+                <div class="map-signal sig1" id="sig1">⚠</div>
+                <div class="map-signal sig2" id="sig2">⚠</div>
+                <div class="map-signal sig3" id="sig3">⚠</div>
+                <div class="map-signal sig4" id="sig4">⚠</div>
+              </div>
+            </div>
+            <div class="alerts-panel">
+              <div class="panel-title"><b>Signal status</b><span>100 m spacing</span></div>
+              <div id="signalList">
+                <div class="signal-row"><span class="signal-light"></span><div><b>Signal #001</b><small>Main Avenue / 0.4 km</small></div><strong>STANDBY</strong></div>
+                <div class="signal-row"><span class="signal-light"></span><div><b>Signal #002</b><small>Main Avenue / 0.6 km</small></div><strong>STANDBY</strong></div>
+                <div class="signal-row"><span class="signal-light"></span><div><b>Signal #003</b><small>Main Avenue / 0.8 km</small></div><strong>STANDBY</strong></div>
+                <div class="signal-row"><span class="signal-light"></span><div><b>Signal #004</b><small>Main Avenue / 1.0 km</small></div><strong>STANDBY</strong></div>
+              </div>
+            </div>
+          </div>
+          <div class="activity">
+            <div class="panel-title"><b>System activity</b><span id="activityTime">Waiting for event</span></div>
+            <div id="activityLog"><p><span>●</span> System initialized. All roadside units are connected.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div>
+        <span class="eyebrow">FOR MUNICIPALITIES</span>
+        <h2>Ready to make emergency routes smarter?</h2>
+        <p>Use the prototype to demonstrate how an early-warning corridor can support faster emergency response.</p>
+      </div>
+      <button class="btn btn-primary btn-lg" data-open-login>Request a demo →</button>
+    </section>
+  </main>
+
+  <footer><div class="brand"><span class="brand-mark">+</span><span>SAAS<span class="brand-dot">.</span></span></div><span>Smart Ambulance Alert System</span><span>Prototype © 2026</span></footer>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <div class="brand"><span class="brand-mark">+</span><b>SAAS Control</b></div>
+      <h2>Municipality sign in</h2>
+      <p>Prototype authentication — no real account is created.</p>
+      <label>Email<input id="email" type="email" placeholder="admin@municipality.gov"></label>
+      <label>Password<input type="password" placeholder="••••••••"></label>
+      <button class="btn btn-primary full" id="loginBtn">Sign in</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
